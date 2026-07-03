@@ -49,12 +49,7 @@ Bash
 npm run dev/pnpm dev
 Abre tu navegador en la dirección que indique la consola (generalmente http://localhost:5173).
 
-📚 Documentación y Demostración
-Tal como se especifica en los requisitos de entrega del Trabajo Práctico:
 
-Documentación Técnica: El documento con el Marco Teórico, Decisiones de Arquitectura y Dificultades/Soluciones se encuentra adjunto en la raíz de este proyecto bajo el nombre Documentacion_FoodStore.pdf.
 
-Video Demostrativo: Puedes ver el recorrido completo de los flujos de Cliente y Administrador en el siguiente enlace:
-https://www.youtube.com/watch?v=9-9oxbuVri4
 
 Autor: Galo Coria Maiorano
