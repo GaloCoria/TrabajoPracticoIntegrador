@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store Admin - Productos</title>
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">FOOD STORE ADMIN</div>
+        <ul class="nav-links">
+            <li><a href="../home/Home.html">Dashboard</a></li>
+            <li><a href="../categories/Categories.html">Categorías</a></li>
+            <li><a href="#" class="nav-active">Productos</a></li>
+            <li><a href="../orders/Orders.html">Pedidos</a></li>
+            <li><a href="../users/Users.html">Usuarios</a></li>
+            <li><a href="#" id="btn-logout" style="color: #e63946; font-weight: bold;">Cerrar Sesión</a></li>
+        </ul>
+    </header>
+
+    <main class="layout-container" style="margin-top: 40px; margin-bottom: 80px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+            <h2 class="section-title" style="margin: 0;">Catálogo de Productos</h2>
+            <button id="btn-nuevo-producto" class="btn-agregar">Nuevo Producto</button>
+        </div>
+
+        <div class="cart-container" style="overflow-x: auto;">
+            <table class="cart-table" style="min-width: 800px;">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Img</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Estado</th>
+                        <th style="text-align: right;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-productos-body"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <div id="product-modal" class="modal-overlay hidden">
+        <div class="modal-content" style="max-width: 500px;">
+            <div class="modal-header">
+                <h3 id="modal-titulo" class="modal-title">Agregar Producto</h3>
+                <button id="btn-cerrar-modal" class="close-btn">&times;</button>
+            </div>
+            
+            <form id="form-producto" class="login-card" style="padding: 20px 0 0 0; box-shadow: none; max-width: 100%;">
+                <input type="hidden" id="prod-id">
+                
+                <div>
+                    <label>Nombre del Producto</label>
+                    <input type="text" id="prod-nombre" required>
+                </div>
+                
+                <div style="display: flex; gap: 15px;">
+                    <div style="flex: 1;">
+                        <label>Precio ($)</label>
+                        <input type="number" id="prod-precio" step="0.01" min="0.01" required>
+                    </div>
+                    <div style="flex: 1;">
+                        <label>Stock</label>
+                        <input type="number" id="prod-stock" min="0" required>
+                    </div>
+                </div>
+
+                <div>
+                    <label>Categoría</label>
+                    <select id="prod-categoria" required></select>
+                </div>
+                
+                <div>
+                    <label>Descripción</label>
+                    <input type="text" id="prod-descripcion" required>
+                </div>
+                
+                <div>
+                    <label>URL de Imagen</label>
+                    <input type="url" id="prod-imagen" required>
+                </div>
+
+                <div style="margin-top: 15px; display: flex; align-items: center; gap: 10px;">
+                    <input type="checkbox" id="prod-disponible" checked style="width: 20px; height: 20px;">
+                    <label for="prod-disponible" style="margin: 0;">Producto Disponible para la venta</label>
+                </div>
+                
+                <div style="display: flex; gap: 10px; margin-top: 25px;">
+                    <button type="button" id="btn-cancelar" class="btn-outline" style="flex: 1; margin: 0;">Cancelar</button>
+                    <button type="submit" class="btn-agregar" style="flex: 1; margin: 0;">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="./Products.ts"></script>
+</body>
+</html>

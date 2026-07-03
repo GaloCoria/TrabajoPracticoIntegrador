@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store - Detalle de Producto</title>
+    <link rel="stylesheet" href="../../../style.css"> 
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">FOOD STORE</div>
+        <ul class="nav-links">
+            <li><a href="../Home/Home.html" class="nav-active">Catálogo</a></li>
+            <li><a href="../../client/Orders/Orders.html">Mis Pedidos</a></li>
+            <li class="cart-link-container">
+                <a href="../Cart/Cart.html">Mi Carrito</a>
+                <span id="cart-counter" class="cart-badge">0</span>
+            </li>
+            <li><a href="../../client/profile/Profile.html">Mi Perfil</a></li>
+            <li><a href="#" id="btn-logout" style="color: #e63946; font-weight: bold;">Cerrar Sesión</a></li>
+        </ul>
+    </header>
+
+    <main class="layout-container">
+        
+        <div class="detail-wrapper">
+            <div class="detail-image-container">
+                <img id="detalle-img" src="" alt="Cargando producto..." onerror="this.src='https://placehold.co/400x300?text=Imagen+No+Disponible'">
+            </div>
+
+            <div class="detail-info">
+                <div>
+                    <span id="detalle-estado" class="badge-estado">Cargando...</span>
+                    <h2 id="detalle-titulo" class="detail-title">Cargando producto...</h2>
+                </div>
+
+                <div class="detail-price" id="detalle-precio">$0,00</div>
+
+                <div class="detail-description">
+                    <h4>Descripción</h4>
+                    <p id="detalle-desc">Cargando la descripción del producto seleccionado...</p>
+                </div>
+
+                <div class="detail-stock-control">
+                    <span id="detalle-stock">Stock disponible: 0</span>
+                    <div class="quantity-wrapper">
+                        <label for="input-cantidad">Cantidad:</label>
+                        <input id="input-cantidad" type="number" value="1" min="1">
+                    </div>
+                </div>
+
+                <div class="detail-actions">
+                    <button id="btn-agregar-detalle" class="btn-agregar">
+                        Agregar al Carrito
+                    </button>
+                    <a href="../home/Home.html" class="btn-outline" style="text-align: center; text-decoration: none;">
+                        Volver
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-info">
+            <h4>Food Store</h4>
+            <p>Sistema de Gestión de Pedidos</p>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-copy">© 2026 Food Store - Desarrollo Frontend</div>
+    </footer>
+
+    <script type="module" src="./ProductDetail.ts"></script>
+</body>
+</html>

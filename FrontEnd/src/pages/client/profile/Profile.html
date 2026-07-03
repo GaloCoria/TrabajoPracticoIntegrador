@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">FOOD STORE</div>
+        <ul class="nav-links">
+            <li><a href="../../store/Home/Home.html">Catálogo</a></li>
+            <li><a href="../Orders/Orders.html">Mis Pedidos</a></li>
+            <li class="cart-link-container">
+                <a href="../../store/Cart/Cart.html">Mi Carrito</a>
+                <span id="cart-counter" class="cart-badge">0</span>
+            </li>
+            <li><a href="#" class="nav-active">Mi Perfil</a></li>
+            <li><a href="#" id="btn-logout" style="color: #e63946; font-weight: bold;">Cerrar Sesión</a></li>
+        </ul>
+    </header>
+    
+    <div style="max-width: 500px; margin: 50px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #2b2d42; margin-bottom: 20px;">Mis Datos Personales</h2>
+        
+        <form id="form-perfil" style="display: flex; flex-direction: column; gap: 15px;">
+            <div>
+                <label style="font-weight: bold; color: #4a4e69; display: block; margin-bottom: 5px;">Nombre:</label>
+                <input type="text" id="perfil-nombre" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+            </div>
+            
+            <div>
+                <label style="font-weight: bold; color: #4a4e69; display: block; margin-bottom: 5px;">Apellido:</label>
+                <input type="text" id="perfil-apellido" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+            </div>
+            
+            <div>
+                <label style="font-weight: bold; color: #4a4e69; display: block; margin-bottom: 5px;">Celular:</label>
+                <input type="text" id="perfil-celular" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+            </div>
+            
+            <button type="submit" style="background: #e63946; color: white; border: none; padding: 12px; border-radius: 5px; font-weight: bold; font-size: 16px; cursor: pointer; margin-top: 10px;">
+                Guardar Cambios
+            </button>
+        </form>
+    </div>
+
+    <script type="module" src="./Profile.ts"></script>
+</body>
+</html>
