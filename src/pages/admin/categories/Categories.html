@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store Admin - Categorías</title>
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">FOOD STORE ADMIN</div>
+        <ul class="nav-links">
+            <li><a href="../home/Home.html">Dashboard</a></li>
+            <li><a href="#" class="nav-active">Categorías</a></li>
+            <li><a href="../products/Products.html">Productos</a></li>
+            <li><a href="../orders/Orders.html">Pedidos</a></li>
+            <li><a href="../users/Users.html">Usuarios</a></li>
+            <li><a href="#" id="btn-logout" style="color: #e63946; font-weight: bold;">Cerrar Sesión</a></li>
+        </ul>
+    </header>
+
+    <main class="layout-container" style="margin-top: 40px; margin-bottom: 80px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+            <h2 class="section-title" style="margin: 0;">Gestión de Categorías</h2>
+            <button id="btn-nueva-categoria" class="btn-agregar">Nueva Categoría</button>
+        </div>
+
+        <div class="cart-container">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th style="text-align: right;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-categorias-body">
+                    </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div id="category-modal" class="modal-overlay hidden">
+        <div class="modal-content" style="max-width: 450px;">
+            <div class="modal-header" style="padding: 10px 0 20px 0;">
+                <h3 id="modal-titulo" class="modal-title">Agregar Categoría</h3>
+                <button id="btn-cerrar-modal" class="close-btn">&times;</button>
+            </div>
+            
+            <form id="form-categoria" class="login-card" style="padding: 20px 0 0 0; box-shadow: none; max-width: 100%;">
+                <input type="hidden" id="categoria-id-input">
+                
+                <div>
+                    <label for="categoria-nombre">Nombre de la Categoría</label>
+                    <input type="text" id="categoria-nombre" required placeholder="Ej: Hamburguesas">
+                </div>
+                
+                <div>
+                    <label for="categoria-descripcion">Descripción</label>
+                    <input type="text" id="categoria-descripcion" required placeholder="Ej: Variedad de medallones artesanales">
+                </div>
+                
+                <div>
+                    <label for="categoria-imagen">URL de la Imagen</label>
+                    <input type="url" id="categoria-imagen" required placeholder="https://ejemplo.com/imagen.jpg">
+                </div>
+                
+                <div style="display: flex; gap: 10px; margin-top: 20px;">
+                    <button type="button" id="btn-cancelar-form" class="btn-outline" style="flex: 1; margin: 0;">Cancelar</button>
+                    <button type="submit" class="btn-agregar" style="flex: 1; margin: 0;">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="./Categories.ts"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store - Panel Admin</title>
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+
+   <header class="header">
+        <div class="logo">FOOD STORE ADMIN</div>
+        <ul class="nav-links">
+            <li><a href="#" class="nav-active">Dashboard</a></li>
+            <li><a href="../categories/Categories.html">Categorías</a></li>
+            <li><a href="../products/Products.html">Productos</a></li>
+            <li><a href="../orders/Orders.html">Pedidos</a></li>
+            <li><a href="../users/Users.html">Usuarios</a></li>
+            <li><a href="#" id="btn-logout" style="color: #e63946; font-weight: bold;">Cerrar Sesión</a></li>
+        </ul>
+    </header>
+
+    <main class="layout-container">
+        
+        <section class="products-section" style="margin-top: 50px; margin-bottom: 80px;">
+            <h2 class="section-title">Panel de Administración</h2>
+            
+            <div id="contenedor-productos">
+                
+                <div class="product-card">
+                    <h3 style="color: #64748b; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">Categorías</h3>
+                    <div id="stat-categorias" style="font-size: 3rem; font-weight: 900; color: #1e293b; margin: 20px 0;">0</div>
+                    <p style="color: #64748b; font-size: 0.9rem;">Registradas en el sistema</p>
+                </div>
+
+                <div class="product-card">
+                    <h3 style="color: #64748b; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">Total Productos</h3>
+                    <div id="stat-productos" style="font-size: 3rem; font-weight: 900; color: #1e293b; margin: 20px 0;">0</div>
+                    <p style="color: #64748b; font-size: 0.9rem;">En el catálogo general</p>
+                </div>
+
+                <div class="product-card">
+                    <h3 style="color: #64748b; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">Total Pedidos</h3>
+                    <div id="stat-pedidos" style="font-size: 3rem; font-weight: 900; color: #1e293b; margin: 20px 0;">0</div>
+                    <p style="color: #64748b; font-size: 0.9rem;">Realizados por los clientes</p>
+                </div>
+
+                <div class="product-card">
+                    <h3 style="color: #64748b; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">Productos Disponibles</h3>
+                    <div id="stat-disponibles" style="font-size: 3rem; font-weight: 900; color: #10b981; margin: 20px 0;">0</div>
+                    <p style="color: #64748b; font-size: 0.9rem;">Activos con stock disponible</p>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>Panel de Control Administrativo</h4>
+                <p>contacto@foodstore.com</p>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="footer-copy">&copy; 2026 Food Store - Todos los derechos reservados.</p>
+        </div>
+    </footer> 
+
+    <script type="module" src="./Home.ts"></script>
+</body>
+</html>

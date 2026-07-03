@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store Admin - Pedidos</title>
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">FOOD STORE ADMIN</div>
+        <ul class="nav-links">
+            <li><a href="../home/Home.html">Dashboard</a></li>
+            <li><a href="../categories/Categories.html">Categorías</a></li>
+            <li><a href="../products/Products.html">Productos</a></li>
+            <li><a href="#" class="nav-active">Pedidos</a></li>
+            <li><a href="../users/Users.html">Usuarios</a></li>
+            <li><a href="#" id="btn-logout" style="color: #e63946; font-weight: bold;">Cerrar Sesión</a></li>
+        </ul>
+    </header>
+
+    <main class="layout-container" style="margin-top: 40px; margin-bottom: 80px;">
+        <h2 class="section-title" style="text-align: left;">Control de Pedidos Global</h2>
+        <div id="orders-container" class="orders-grid"></div>
+    </main>
+
+    <div id="admin-order-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-order-title" class="modal-title">Detalle</h3>
+                <button id="close-modal-btn" class="close-btn">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <div style="background: #f8fafc; padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                    <p><strong>Cliente:</strong> <span id="cliente-nombre"></span></p>
+                    <p><strong>Fecha:</strong> <span id="pedido-fecha"></span></p>
+                    <p><strong>Total:</strong> <span id="pedido-total" style="color:#e63946; font-weight:bold;"></span></p>
+                </div>
+                
+                <div class="order-section">
+                    <h4>Desglose</h4>
+                    <ul id="modal-order-items" class="modal-items-list"></ul>
+                </div>
+
+                <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
+                    <label style="font-weight: bold; display: block; margin-bottom: 10px;">Actualizar Estado del Pedido:</label>
+                    <div style="display: flex; gap: 10px;">
+                        <select id="select-estado" style="flex: 1; padding: 10px; border: 2px solid #e2e8f0; border-radius: 8px;">
+                            <option value="PENDIENTE">Pendiente</option>
+                            <option value="EN_PREPARACION">En Preparación</option>
+                            <option value="ENTREGADO">Entregado</option>
+                            <option value="CANCELADO">Cancelado</option>
+                        </select>
+                        <button id="btn-actualizar-estado" class="btn-agregar">Actualizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./Orders.ts"></script>
+</body>
+</html>
